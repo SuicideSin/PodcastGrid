@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<% include ../partials/header.ejs %>
+</head>
+<body>
+	<% include ../partials/nav.ejs %>
+	<script src="/js/audiojs/audio.min.js"></script>
+	<style>
+	#feature-container {
+		height:auto;
+	}
+	</style>
+	<div id="feature-container">
+		<div id="episode">
+			<a id="episode-art-link"><div id="episode-art"></div></a>
+			<div id="episode-data">
+				<div id="episode-title">loading episode</div>
+				<audio id="episode-player"></audio>
+			</div>
+			<div id="episode-notes"></div>
+			<div id="episode-comments">
+				<div class="load-comment link">Load Comments</div>
+				<div id="disqus_thread"></div>
+			</div>
+		</div>
+	</div>
+	<script src="/js/podcast.js"></script>
+	<div id="filter-container">
+		<div id="filter-links">
+			<ul id="filter-links-list">
+				<li><a id="rss" href="#">RSS</a></li>
+				<li><a id="itunes" href="#">iTunes</a></li>
+				<li><a id="contact" href="#">Contact</a></li>
+			</ul>
+		</div>
+	</div>
+	<div id="video-list-container">
+		<div id="list-chunk-container"></div>
+		<div style="clear:both;"></div>
+	</div>
+	<% include ../partials/footer.ejs %>
+</body>
+</html>

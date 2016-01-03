@@ -1,0 +1,17 @@
+The following are third-party tools used in PodcastGrid.
+
+Node.js
+https://nodejs.org
+License: https://raw.githubusercontent.com/nodejs/node/master/LICENSE
+
+EJS
+http://ejs.co/
+License: http://ejs.co/#license
+
+Express
+http://expressjs.com/
+License: https://raw.githubusercontent.com/strongloop/express/master/LICENSE
+
+mysql
+https://github.com/felixge/node-mysql
+License: https://raw.githubusercontent.com/felixge/node-mysql/master/License

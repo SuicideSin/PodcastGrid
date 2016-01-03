@@ -1,0 +1,8 @@
+{
+  "name": "PodcastGrid",
+  "description": "A grid of podcast episodes.",
+  "repository": "https://github.com/rolandoislas/PodcastGrid",
+  "logo": "",
+  "keywords": ["node", "podcast"],
+  "image": "heroku/nodejs"
+}
