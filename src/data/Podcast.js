@@ -5,7 +5,7 @@ var Podcast = function(slug) {
 };
 
 Podcast.prototype.getEpisodes = function(callback) {
-	var query = "SELECT `title`, `description`, `url`, `eid` `id`, `pubdate` FROM `episodes` WHERE `podcast` = $slug;";
+	var query = "SELECT `title`, `description`, `url`, `eid` `id`, `pubdate` FROM `episodes` WHERE `podcast` = $slug ORDER BY `eid` DESC;";
 	var that = this;
 	this.db.getConnection(function(err, connection) {
 		if(err) {
