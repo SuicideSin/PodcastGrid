@@ -124,7 +124,7 @@ function isEpisode() {
 function checkEpisode() {
 	if (isEpisode()) {
 		var path = window.location.pathname.split( '/' );
-		loadEpisode(undefined, path[2]);
+		loadEpisode({}, path[2]);
 	} else {
 		loadEpisode(undefined, episodeData[0]["id"]);
 	}
