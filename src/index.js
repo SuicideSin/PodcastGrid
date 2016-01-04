@@ -20,6 +20,15 @@ webServer.addGet("/ajax/list", function(req, res) {
 		res.json(list);
 	});
 });
+// Feed
+webServer.addGet("/ajax/feed/:slug", function(req, res) {
+	new Podcast(req.params.slug).getFeed(function(err, feed) {
+		if (err)
+			return res.status(500);
+		res.type("xml");
+		res.send(feed);
+	});
+});
 // Episode Data
 webServer.addGet("/ajax/episodes/:slug", function(req, res) {
 	new Podcast(req.params.slug).getEpisodes(function(err, episodes) {
