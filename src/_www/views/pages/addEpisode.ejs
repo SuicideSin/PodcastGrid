@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<% include ../partials/header.ejs %>
+</head>
+<body>
+	<% include ../partials/nav.ejs %>
+	<h1>Add Episode</h1>
+	<form action="addEpisode" method="post">
+	Auth: <input type="text" name="auth"><br>
+	Title: <input type="text" name="title" value="" style="width:1000px;"><br>
+	Description: <textarea type="text" name="description" value="" 
+		style="width:400px;height:100px;"></textarea><br>
+	Audio URL: <input type="text" name="url" value=""><br>
+	Podcast slug: <input type="text" name="slug" value=""><br>
+	<input type="submit" value="Submit">
+	</form>
+	<% include ../partials/footer.ejs %>
+</body>
+</html>

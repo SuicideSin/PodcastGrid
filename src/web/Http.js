@@ -1,7 +1,9 @@
 var Http = function(port) {
 	this.port = port;
 	this.Express = require('express');
+	this.bodyParser = require('body-parser');
 	this.gets = [];
+	this.posts = [];
 };
 
 Http.prototype.run = function() {
@@ -12,9 +14,16 @@ Http.prototype.run = function() {
 		app.use(forceSsl);
 	}
 	
+	app.use(this.bodyParser.json());
+	app.use(this.bodyParser.urlencoded({ extended: true }));
+	
 	for (var i = 0; i < this.gets.length; i++) {
 		app.get(this.gets[i][0], this.gets[i][1]);
 	}
+	
+	this.posts.forEach(function(post) {
+		app.post(post[0], post[1]);
+	});
 	
 	app.use(this.Express.static(__dirname + '/../_www/public'));
 	app.set('views', __dirname + '/../_www/views');
@@ -45,6 +54,10 @@ function forceSsl(req, res, next) {
 
 Http.prototype.addGet = function(path, callback) {
 	this.gets.push([path, callback]);
+};
+
+Http.prototype.addPost = function(path, callback) {
+	this.posts.push([path, callback]);
 };
 
 module.exports = Http;
