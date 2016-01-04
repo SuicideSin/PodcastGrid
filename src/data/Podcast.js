@@ -88,7 +88,7 @@ Podcast.prototype.getFeed = function(callback) {
 						that.Php.stripslashes(that.Php.nl2br(episode.description.autoLink()))
 						+ "]]>")
 					+ "<pubDate>$pubdate</pubDate>".replace("$pubdate", 
-						new that.Moment(episode.pubdate).utc(-7).format("ddd, DD MMM YYYY HH:mm:ss ZZ"))
+						new that.Moment(episode.pubdate).format("ddd, DD MMM YYYY HH:mm:ss ZZ"))
 					+ "</item>";
 			});
 			xml += "</channel>"
