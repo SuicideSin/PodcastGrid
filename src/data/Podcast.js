@@ -21,6 +21,7 @@ Podcast.prototype.getEpisodes = function(callback) {
 				connection.release();
 				return callback(err);
 			}
+			connection.release();
 			return callback(null, rows);
 		});
 	});
@@ -41,6 +42,7 @@ Podcast.prototype.getInfo = function(callback) {
 				connection.release();
 				return callback(err);
 			}
+			connection.release();
 			return callback(null, rows[0]);
 		});
 	});
@@ -59,6 +61,7 @@ Podcast.prototype.getPodcasts = function(callback) {
 				connection.release();
 				return callback(err);
 			}
+			connection.release();
 			return callback(null, rows);
 		});
 	});
@@ -126,6 +129,7 @@ Podcast.prototype.addEpisode = function(title, description, url, callback) {
 					connection.release();
 					return callback(err);
 				}
+				connection.release();
 				return callback(null);
 			});
 		});
