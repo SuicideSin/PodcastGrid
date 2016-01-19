@@ -3,19 +3,31 @@
 var episodeData;
 var as;
 
-function populateChunk() {
+function populateChunk(podcastData) {
 	for(var i = 0; i <= episodeData.length -1; i++){
 		var thumb = $("<div>", {
 			"class": "video-chunk"
 		})
 			.data("id", episodeData[i]['id'])
-		.append($("<a>")
-			.attr("href", "/" + getPodcastSlug() + "/" + episodeData[i].id + "#episode")
-		.append($("<div>", {
-			"class": "video-chunk-thumbnail"
-		})
-			.attr("title", episodeData[i].title)
-			.css("background", "#ccc url(//data.rolandoislas.com/podcast/" + getPodcastSlug().replace("-", "_") + "/thumb/" + episodeData[i].id + ".jpg)")));
+			.append($("<a>")
+				.attr("href", "/" + getPodcastSlug() + "/" + episodeData[i].id + "#episode")
+			.append($("<div>", {
+				"class": "video-chunk-thumbnail"
+			})
+				.attr("title", episodeData[i].title)
+				.css("background", "#000")
+				.html($("<div>", {
+					"class": "iconThumb"
+				})
+					.css("background", "#ccc url(" + podcastData.icon_180 + ")")
+				)
+				.append($("<div>", {
+					"class": "numberThumb"
+				})
+					.html(episodeData[i].id)
+				)
+			)
+		);
 		$("#list-chunk-container").append(thumb);
 	}
 }
@@ -27,14 +39,14 @@ function getPodcastSlug() {
 	return false;
 }
 
-function getEpisodeData() {
+function getEpisodeData(podcastData) {
 	$.ajax({  
 		type: "GET",
 		dataType:"json",
 		url: "/ajax/episodes/" + getPodcastSlug(),
 		success: function(data){
 			episodeData = data;
-			populateChunk();
+			populateChunk(podcastData);
 			audiojs.events.ready(function() {
 				checkEpisode();
 			});
@@ -61,6 +73,7 @@ function getPodcastData() {
 		success: function(data){
 			populateLinks(data);
 			populatePodcastInfo(data);
+			getEpisodeData(data);
 		}  
 	});
 }
@@ -149,7 +162,6 @@ function initializeAudioJS() {
 
 $(document).ready(function(){
 	initializeAudioJS();
-	getEpisodeData();
 	getPodcastData();
 	addEvents();
 });
