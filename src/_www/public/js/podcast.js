@@ -5,7 +5,18 @@ var as;
 
 function populateChunk() {
 	for(var i = 0; i <= episodeData.length -1; i++){
-		$("#list-chunk-container").append('<div class="video-chunk" data-id="' + episodeData[i]['id'] + '"><a href="/' + getPodcastSlug() + '/' + episodeData[i]['id'] + '#episode"><div class="video-chunk-thumbnail" title="' + episodeData[i]['title'] +'" style="background:#ccc url(//data.rolandoislas.com/podcast/' + getPodcastSlug().replace("-", "_") + '/thumb/' + episodeData[i]['id'] + '.jpg);background-size:cover;"></div><p class="video-chunk-description" title="' + episodeData[i]['title'] + '">' + episodeData[i]['title'] + '</p></a></div>');
+		var thumb = $("<div>", {
+			"class": "video-chunk"
+		})
+			.data("id", episodeData[i]['id'])
+		.append($("<a>")
+			.attr("href", "/" + getPodcastSlug() + "/" + episodeData[i].id + "#episode")
+		.append($("<div>", {
+			"class": "video-chunk-thumbnail"
+		})
+			.attr("title", episodeData[i].title)
+			.css("background", "#ccc url(//data.rolandoislas.com/podcast/" + getPodcastSlug().replace("-", "_") + "/thumb/" + episodeData[i].id + ".jpg)")));
+		$("#list-chunk-container").append(thumb);
 	}
 }
 
