@@ -316,7 +316,7 @@ body{
 	float: left;
 }
 .numberThumb {
-	font-size: 7vw;
+	font-size: 7em;
     color: #fff;
     width: 45%;
     text-align: center;
@@ -408,6 +408,9 @@ body{
 	#ga-container{
 		width:320px;
 		height:50px;
+	}
+	.numberThumb {
+		font-size: 3em;
 	}
 	.video-chunk{
 		width:157px;
