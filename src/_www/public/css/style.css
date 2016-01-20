@@ -1,6 +1,6 @@
 @font-face {
   font-family: 'TimeBurner';
-  src: url('http://www.fontsaddict.com/fontface/timeburner.ttf');
+  src: url('/css/timeburner.ttf');
 }
 *{margin:0;padding:0;border:0;}
 .hidden{display:none;}
@@ -317,6 +317,7 @@ body{
 }
 .numberThumb {
 	font-size: 7em;
+	font-family: TimeBurner;
     color: #fff;
     width: 45%;
     text-align: center;
