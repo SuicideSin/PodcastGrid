@@ -116,6 +116,7 @@ Podcast.prototype.addEpisode = function(title, description, url, callback) {
 			}
 			if (eids.length == 0) { // set 0 eid for new podcast
 				eids = [];
+				eids[0] = {};
 				eids[0].eid = 0;
 			}
 			query = query
