@@ -114,10 +114,8 @@ Podcast.prototype.addEpisode = function(title, description, url, callback) {
 				connection.release();
 				return callback(err);
 			}
-			if (eids.length == 0) {
-				connection.release();
-				return callback(new Error("No slug found"));
-			}
+			if (eids.length == 0) // set 0 eid for new podcast
+				eids[0].eid = 0
 			query = query
 				.replace("$eid", connection.escape(eids[0].eid + 1))
 				.replace("$title", connection.escape(title))
