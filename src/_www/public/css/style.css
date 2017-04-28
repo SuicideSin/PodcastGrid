@@ -7,26 +7,26 @@
 .invisible{visibility:hidden;}
 .link{cursor: pointer;}
 body{
-	background:#111 url('//data.rolandoislas.com/www/img/background_maze_black.jpg');
+	background:#111 url('/img/background_maze_black.jpg');
 	font:12px "Courier New", monospace, Verdana, Helvetica, Arial, sans-serif;
 }
 #main-container{
 	width:1060px;
 	min-width: 1060px;
 	height:100%;
-	background:#eee url('//data.rolandoislas.com/www/img/background_maze_white.jpg');
+	background:#eee url('/img/background_maze_white.jpg');
 	margin:0 auto;
 }
 #header{
 	width:100%;
 	height:39px;
-	background:#111 url('//data.rolandoislas.com/www/img/background_maze_black.jpg');
+	background:#111 url('/img/background_maze_black.jpg');
 }
 #logo-link{
 	width:265px;
 	height:39px;
 	position:absolute;
-	background:url('//data.rolandoislas.com/www/img/header_logo.png') no-repeat;
+	background:url('/img/header_logo.png') no-repeat;
 }
 #logo-link-inner{
 	width:100%;
@@ -41,12 +41,12 @@ body{
 #site-menu-icon{
 	width: 39px;
 	height: 39px;
-	background: url('//data.rolandoislas.com/www/img/header_site_menu.png') no-repeat 0 0;
+	background: url('/img/header_site_menu.png') no-repeat 0 0;
 	float: left;
 }
 #site-menu{
 	float: left;
-	background: #111 url('//data.rolandoislas.com/www/img/background_maze_black.jpg');
+	background: #111 url('/img/background_maze_black.jpg');
 	display: none;
 	border-radius: 5px;
 }
@@ -76,28 +76,28 @@ body{
 	margin: 0 0 5px 5px;
 }
 .header-link-youtube{
-	background:url('//data.rolandoislas.com/www/img/header_links.png') no-repeat 0 0;
+	background:url('/img/header_links.png') no-repeat 0 0;
 }
 .header-link-twitter{
-	background:url('//data.rolandoislas.com/www/img/header_links.png') no-repeat 0 -16px;
+	background:url('/img/header_links.png') no-repeat 0 -16px;
 }
 .header-link-twitch{
-	background:url('//data.rolandoislas.com/www/img/header_links.png') no-repeat -16px 0;
+	background:url('/img/header_links.png') no-repeat -16px 0;
 }
 .header-link-wordpress{
-	background:url('//data.rolandoislas.com/www/img/header_links.png') no-repeat -16px -16px;
+	background:url('/img/header_links.png') no-repeat -16px -16px;
 }
 .header-link-gplus{
-	background:url('//data.rolandoislas.com/www/img/header_links.png') no-repeat -32px 0;
+	background:url('/img/header_links.png') no-repeat -32px 0;
 }
 .header-link-facebook{
-	background:url('//data.rolandoislas.com/www/img/header_links.png') no-repeat -32px -16px;
+	background:url('/img/header_links.png') no-repeat -32px -16px;
 }
 .header-link-reddit{
-	background:url('//data.rolandoislas.com/www/img/header_links.png') no-repeat -48px 0;
+	background:url('/img/header_links.png') no-repeat -48px 0;
 }
 .header-link-spreadshirt{
-	background:url('//data.rolandoislas.com/www/img/header_links.png') no-repeat -48px -16px;
+	background:url('/img/header_links.png') no-repeat -48px -16px;
 }
 #feature-container{
 	width:100%;
@@ -108,22 +108,22 @@ body{
 	height:50px;
 }
 .fs-youtube{
-	background:url('//data.rolandoislas.com/www/img/feature_selection.jpg') no-repeat 0 0;
+	background:url('/img/feature_selection.jpg') no-repeat 0 0;
 }
 .fs-youtube:hover{
-	background:url('//data.rolandoislas.com/www/img/feature_selection.jpg') no-repeat 0 -50px;
+	background:url('/img/feature_selection.jpg') no-repeat 0 -50px;
 }
 .fs-twitch-offline{
-	background:url('//data.rolandoislas.com/www/img/feature_selection.jpg') no-repeat -530px 0;
+	background:url('/img/feature_selection.jpg') no-repeat -530px 0;
 }
 .fs-twitch-offline:hover{
-	background:url('//data.rolandoislas.com/www/img/feature_selection.jpg') no-repeat -530px -50px;
+	background:url('/img/feature_selection.jpg') no-repeat -530px -50px;
 }
 .fs-twitch-online{
-	background:url('//data.rolandoislas.com/www/img/feature_selection.jpg') no-repeat -530px -100px;
+	background:url('/img/feature_selection.jpg') no-repeat -530px -100px;
 }
 .fs-twitch-online:hover{
-	background:url('//data.rolandoislas.com/www/img/feature_selection.jpg') no-repeat -530px -150px;
+	background:url('/img/feature_selection.jpg') no-repeat -530px -150px;
 }
 .feature-selector{
 	width:50%;
@@ -203,7 +203,7 @@ body{
 #filter-container{
 	width:100%;
 	height:50px;
-	background:#000 url('//data.rolandoislas.com/www/img/background_maze_black.jpg');
+	background:#000 url('/img/background_maze_black.jpg');
 }
 #filter-links{
 	float:left;
@@ -236,14 +236,14 @@ body{
 #search-submit{
 	width:30px;
 	height:30px;
-	background:#444 url('//data.rolandoislas.com/www/img/search_icon.png');
+	background:#444 url('/img/search_icon.png');
 	position:absolute;
 	margin:-32px 0 0 160px;
 	border:1px solid #777;
 	border-radius:0 2px 2px 0;
 }
 #search-submit:active{
-	background:#666 url('//data.rolandoislas.com/www/img/search_icon.png');
+	background:#666 url('/img/search_icon.png');
 }
 #video-list-container, #twitch-chat-container{
 	width:100%;
